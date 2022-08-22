@@ -16,6 +16,10 @@ body.open {
   overflow: hidden;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .hamburger {
   display: none;
 }
@@ -256,17 +260,49 @@ section {
 .about-profile {
   width: 20%;
   position: relative;
-  background-image: url("./img/Profile.jpg");
+  background-image: url("./img/portfolio-img.jpg");
   background-size: cover;
   background-position: center;
 
   min-width: 201px;
 }
 
-/* .about-profile img {
-  width: 100%;
-  border-radius: 5px;
-} */
+.about-intro .my-story {
+  width: 70%;
+  line-height: 1.8;
+  color: #1c1c1cef;
+}
+
+.about-intro .my-story p {
+  margin-bottom: 10px;
+}
+
+.list-tech {
+  display: flex;
+}
+
+.list-tech ul {
+  margin-right: 100px;
+  list-style: none;
+}
+
+.list-tech ul li {
+  margin: 10px 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.list-tech span {
+  font-weight: 500;
+}
+
+.list-dev {
+  display: flex;
+}
+
+.list-dev div {
+  margin-right: 60px;
+}
 
 .works h2,
 .contact h2 {
@@ -367,6 +403,18 @@ section {
 .landing-cards .card:nth-child(4) {
   background: linear-gradient(0deg, #1f1e29f1, #1f1e29f1),
     url(/img/projects/loopstudio.png);
+  background-size: cover;
+}
+
+.landing-cards .card:nth-child(5) {
+  background: linear-gradient(0deg, #1f1e29f1, #1f1e29f1),
+    url(/img/projects/blogr.png);
+  background-size: cover;
+}
+
+.landing-cards .card:nth-child(6) {
+  background: linear-gradient(0deg, #1f1e29f1, #1f1e29f1),
+    url(/img/projects/sunnyside.jpg);
   background-size: cover;
 }
 
@@ -509,15 +557,6 @@ form input[type="submit"] {
   .social-links {
     justify-content: center;
   }
-
-  /* .about-intro {
-    flex-direction: column-reverse;
-  } */
-
-  /* .about-profile {
-    width: 50%;
-    margin-left: auto;
-  } */
 
   .about-intro-message {
     margin-top: 20px;
