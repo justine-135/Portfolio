@@ -112,6 +112,11 @@ input[type="submit"] {
   width: 100%;
   transition: 350ms ease-in-out;
   z-index: 1001;
+  backdrop-filter: blur(2px);
+}
+
+.navbar-wrapper.open-menu {
+  backdrop-filter: blur(0px);
 }
 
 .navbar {
@@ -124,7 +129,6 @@ input[type="submit"] {
   height: 100%;
   background-color: transparent;
   z-index: 1005;
-  backdrop-filter: blur(2px);
 }
 
 .navlinks {
@@ -165,11 +169,14 @@ section {
   background-color: rgb(248, 248, 248);
 }
 
+.home-wrapper {
+  height: 85vh;
+}
+
 .home {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 85vh;
 }
 
 .home-text {
@@ -258,15 +265,41 @@ section {
   letter-spacing: -1px;
 }
 
+.about-profile-div {
+  background-color: #1f1e29;
+  transition: 0.2s;
+}
+
 .about-profile {
   width: 20%;
   position: relative;
-  background-image: url("./img/portfolio-img.jpg");
+  background-image: url("./img/portfolio-img-removebg.png");
   background-size: cover;
   background-position: center;
-
   min-width: 201px;
+  mix-blend-mode: luminosity;
+  transition: 0.2s;
 }
+
+.about-profile:hover {
+  mix-blend-mode: normal;
+}
+
+.about-profile-div:hover {
+  background-color: rgb(253, 253, 246);
+}
+
+/* .profile-blur {
+  position: absolute;
+  min-width: 201px;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: luminosity;
+} */
+/* 
+.profile-blur:hover {
+  backdrop-filter: blur(0px);
+} */
 
 .about-intro .my-story {
   width: 70%;
@@ -545,6 +578,15 @@ form input[type="submit"] {
   font-size: 0.875rem;
 }
 
+.overlay.open {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
 @media screen and (max-width: 875px) {
   .home {
     height: auto;
@@ -577,8 +619,11 @@ form input[type="submit"] {
     height: 100%;
   }
 
-  .about-profile {
+  .about-profile-div {
     margin-top: 50px;
+  }
+
+  .about-profile {
     width: 100%;
     height: 370px;
   }
@@ -609,7 +654,7 @@ form input[type="submit"] {
   section {
     width: 90%;
   }
-  .home {
+  .home-wrapper {
     height: 90vh;
   }
   .home h1 {
@@ -620,6 +665,10 @@ form input[type="submit"] {
 
   .home svg {
     height: 250px;
+  }
+
+  .home {
+    padding-top: 50px;
   }
 
   .navbar-wrapper {
