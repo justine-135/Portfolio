@@ -265,17 +265,18 @@ section {
 }
 
 .about-profile-div {
-  background-color: #1f1e29;
+  background-color: #282733;
   transition: 0.2s;
 }
 
 .about-profile {
+  height: 100%;
   width: 20%;
   position: relative;
   background-image: url("./img/portfolio-img-removebg.png");
   background-size: cover;
   background-position: center;
-  min-width: 201px;
+  min-width: 250px;
   mix-blend-mode: luminosity;
   transition: 0.2s;
 }
