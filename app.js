@@ -39,7 +39,6 @@ window.addEventListener("load", () => {
 
   // adding hamburger menu click event
   hamburger.addEventListener("click", () => {
-    console.log(links);
     hamburger.classList.toggle("open");
     wrapper.classList.toggle("open");
     menu.classList.toggle("open");
@@ -54,6 +53,9 @@ window.addEventListener("load", () => {
       hamburger.classList.remove("open");
       navbar.style.top = "-50%";
       navbar.style.height = "80px";
+      console.log(links[i]);
+      overlay.classList.toggle("open");
+      navbar.classList.toggle("open-menu");
     });
   }
 });
