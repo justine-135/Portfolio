@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   const menu = document.querySelector(".hamburger-menu");
   const wrapper = document.querySelector("body");
   const links = document.querySelector(".menu").children;
+  const overlay = document.querySelector(".overlay");
 
   let scrollPos = 0;
   let screenWidth = window.innerWidth;
@@ -42,6 +43,8 @@ window.addEventListener("load", () => {
     hamburger.classList.toggle("open");
     wrapper.classList.toggle("open");
     menu.classList.toggle("open");
+    overlay.classList.toggle("open");
+    navbar.classList.toggle("open-menu");
   });
 
   for (let i = 0; links.length; i++) {
